@@ -31,13 +31,13 @@ class Program
             switch (choice)
             {
                 case "1":
-                    // ✅ Get a random prompt
+                    
                     string prompt = promptGenerator.GetRandomPrompt();
                     Console.WriteLine(prompt);
                     Console.Write("> ");
                     string userEntry = Console.ReadLine();
 
-                    // ✅ Create and add an entry
+                    
                     string date = DateTime.Now.ToShortDateString();
                     Entry newEntry = new Entry(date, prompt, userEntry);
                     myJournal.AddEntry(newEntry);
@@ -45,19 +45,19 @@ class Program
                     break;
 
                 case "2":
-                    // ✅ Display all entries
+                    
                     myJournal.DisplayAll();
                     break;
 
                 case "3":
-                    // ✅ Load from file
+                    
                     Console.Write("Enter filename to load: ");
                     string loadFile = Console.ReadLine();
                     myJournal.LoadFromFile(loadFile);
                     break;
 
                 case "4":
-                    // ✅ Save to file
+                    
                     Console.Write("Enter filename to save: ");
                     string saveFile = Console.ReadLine();
                     myJournal.SaveToFile(saveFile);
